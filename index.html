@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Управление Расписанием</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Управление Расписанием Врачей</h1>
+    <h2>Создать Расписание</h2>
+    <form id="scheduleForm">
+        <input type="number" id="lpuID" placeholder="ID ЛПУ" required>
+        <input type="number" id="doctorID" placeholder="ID Врача" required>
+        <input type="date" id="startDate" placeholder="Дата начала" required>
+        <input type="date" id="endDate" placeholder="Дата окончания" required>
+        <input type="text" id="workDays" placeholder="Рабочие дни (напр. 1,2,3)" required>
+        <input type="text" id="weekParity" placeholder="Четность недели (четная, нечетная)" required>
+        <input type="text" id="dayParity" placeholder="Четность дня (четный, нечетный)" required>
+        <input type="time" id="startTime" placeholder="Время начала" required>
+        <input type="time" id="endTime" placeholder="Время окончания" required>
+        <input type="number" id="appointmentDuration" placeholder="Длительность приема (минуты)" required>
+        <input type="number" id="officeNumber" placeholder="Номер кабинета" required>
+        <button type="submit">Создать</button>
+    </form>
+    <h1>Расписание врача</h1>
+    <input type="number" id="getDoctorID" placeholder="Введите ID врача" required>
+    <button onclick="getSchedule()">Загрузить расписание</button>
+    <table>
+        <thead>
+            <tr id="dateRow"></tr>
+        </thead>
+        <tbody id="scheduleBody"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
