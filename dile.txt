@@ -1,5 +1,0 @@
-nikitoakorovko
-g3vSNZNoN8NG48NY
-50.7.93.83
-
-mongodb+srv://nikitoakorovko:<password>@cluster0.t3b4vgm.mongodb.net/
