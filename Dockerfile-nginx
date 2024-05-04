@@ -1,0 +1,14 @@
+# Используем официальный образ Nginx
+FROM nginx:alpine
+
+# Удаляем стандартную страницу Nginx
+RUN rm -rf /usr/share/nginx/html/*
+
+# Копируем файл index.html в контейнер
+COPY ./index.html /usr/share/nginx/html/index.html
+
+# Настраиваем Nginx на прослушивание нестандартного порта
+COPY nginx.conf /etc/nginx/nginx.conf
+
+# Открываем порт 5500
+EXPOSE 5500
